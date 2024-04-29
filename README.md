@@ -31,13 +31,14 @@ If you used Vite to generate your project you can directly move on to the deploy
 
 Modify the `postinstall` script of your package.json located at the root of your project as follows :
 
-```diff
+```json
 {
+  ...
   "scripts": {
     "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
--    ...
+  ...
   },
-- ...
+  ...
 }
 ```
 

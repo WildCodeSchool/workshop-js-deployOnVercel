@@ -31,13 +31,14 @@ Si vous avez utilisé Vite pour générer votre projet vous pouvez directement p
 
 Modifiez le script `postinstall` de votre package.json se trouvant à la racine de votre projet comme suit :
 
-```diff
+```json
 {
+  ...
   "scripts": {
     "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
--    ...
+  ...
   },
-- ...
+  ...
 }
 ```
 
