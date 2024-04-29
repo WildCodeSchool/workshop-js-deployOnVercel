@@ -34,7 +34,7 @@ Modifiez le script `postinstall` de votre package.json se trouvant à la racine 
 ```diff
 {
 -  ...
--  "scripts": {
+  "scripts": {
     "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
 -    ...
   },
