@@ -1,6 +1,6 @@
 # Déploiement de l'application React sur Vercel
 
-[⬅ English Version](./README)
+[⬅ English Version](./)
 
 Le Frontend Cloud de Vercel fournit l'expérience et l'infrastructure aux développeurs pour créer, faire évoluer et sécuriser un Web plus rapide et plus personnalisé. Vercel est la plateforme la plus simple pour déployer le site Web. En connectant le référentiel GitHub dans le vercel, vous pouvez simplement déployer la branche principale ou principale sur les domaines vercel.
 {:.alert-info}
