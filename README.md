@@ -33,7 +33,7 @@ Modify the `postinstall` script of your package.json located at the root of your
 
 ```diff
 {
-- "name": "{nom_de_votre_projet}",
+-  "name": "{nom_de_votre_projet}",
 -  "private": true,
 -  ...
   "scripts": {
