@@ -45,6 +45,13 @@ Modify the `postinstall` script of your package.json located at the root of your
 
 Vercel is a platform for developers that provides the tools, workflows, and infrastructure you need to build and deploy your web apps faster, without the need for additional configuration.
 
+### Create a account
+
+To get started, create an account with Vercel. 
+![account-vercel](./assets/account.jpeg)
+
+Once you create an account, you can choose to authenticate either with a Git provider or by using an email.
+
 ### Vercel configuration
 
 React Router can sometimes encounter issues when deployed to Vercel due to the way Vercel handles serverless functions and routing.
@@ -72,13 +79,6 @@ When you use client-side routing in a single-page application, all of the routin
 
 Note that this vercel.json file is specific to Vercel, which is a cloud platform for serverless deployment. Other server environments may use different configuration files or require different settings to handle client-side routing and 404 errors.
 {:.alert-info}
-
-### Create a account
-
-To get started, create an account with Vercel. 
-![account-vercel](./assets/account.jpeg)
-
-Once you create an account, you can choose to authenticate either with a Git provider or by using an email.
 
 ### Import a existing project
 
