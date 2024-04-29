@@ -41,11 +41,39 @@ Modifiez le script `postinstall` de votre package.json se trouvant à la racine 
 }
 ```
 
-## Configuration de déploiement de Vercel
+## Configuration du déploiement avec Vercel
 
 Vercel est une plate-forme destinée aux développeurs qui fournit les outils, les flux de travail et l'infrastructure dont vous avez besoin pour créer et déployer vos applications Web plus rapidement, sans avoir besoin de configuration supplémentaire.
 
-### Avant que tu commences
+### Configuration Vercel
+
+React Router peut parfois rencontrer des problèmes lors de son déploiement sur Vercel en raison de la manière dont Vercel gère les fonctions et le routage côté serveur.
+
+![404](./assets/404.png)
+
+#### vercel.json
+
+Un problème courant lors de l'actualisation de la page ou pendant la navigation directe vers une URL dans une application react déployer sur un serveur est l'apparition d'une erreur 404. En effet, Vercel ne sait pas comment gérer le routage côté client par défaut et le serveur renvoie une erreur 404 au lieu de servir le fichier index.html dont React Router a besoin pour gérer la requête.
+
+Pour résoudre ce problème, vous pouvez configurer des règles de réécriture dans le fichier `vercel.json` à la racine de votre application React (`/client`) pour rediriger toutes les requêtes vers le fichier index.html :
+
+```js
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+Lorsque vous utilisez le routage côté client dans une application monopage, tout le routage est géré côté client plutôt que côté serveur. Cela signifie que lorsque vous accédez à une URL spécifique dans votre application, le serveur doit renvoyer le fichier index.html afin que le routage côté client puisse prendre le relais et afficher le contenu correct.
+
+Notez que ce fichier vercel.json est spécifique à Vercel, qui est une plateforme cloud pour le déploiement sans serveur. D'autres environnements de serveur peuvent utiliser des fichiers de configuration différents ou nécessiter des paramètres différents pour gérer le routage côté client et les erreurs 404.
+{:.alert-info}
+
+### Création de compte
 
 Pour commencer, créez un compte chez Vercel.
 ![compte-vercel](./assets/account.jpeg)

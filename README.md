@@ -45,7 +45,35 @@ Modify the `postinstall` script of your package.json located at the root of your
 
 Vercel is a platform for developers that provides the tools, workflows, and infrastructure you need to build and deploy your web apps faster, without the need for additional configuration.
 
-### Before you begin
+### Vercel configuration
+
+React Router can sometimes encounter issues when deployed to Vercel due to the way Vercel handles serverless functions and routing.
+
+![404](./assets/404.png)
+
+#### vercel.json
+
+One common issue is that refreshing the page or navigating directly to a URL within the application can result in a 404 error. This is because Vercel doesn’t know how to handle client-side routing by default, and the server returns a 404 error instead of serving the index.html file that React Router needs to handle the request.
+
+To fix this issue, you can set up rewrite rules in the `vercel.json` file in the root of your react app (`/client`) to redirect all requests to the index.html file : 
+
+```js
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+When you use client-side routing in a single-page application, all of the routing is handled on the client side rather than the server side. That means when you navigate to a specific URL within your application, the server needs to return the index.html file so that the client-side routing can take over and display the correct content.
+
+Note that this vercel.json file is specific to Vercel, which is a cloud platform for serverless deployment. Other server environments may use different configuration files or require different settings to handle client-side routing and 404 errors.
+{:.alert-info}
+
+### Create a account
 
 To get started, create an account with Vercel. 
 ![account-vercel](./assets/account.jpeg)
