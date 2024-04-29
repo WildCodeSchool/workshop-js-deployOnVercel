@@ -29,7 +29,7 @@ If you used Vite to generate your project you can directly move on to the deploy
 
 #### package.json
 
-Modifier le script `postinstall` de votre package.json se trouvant à la racine de votre projet comme suit : 
+Modify the `postinstall` script of your package.json located at the root of your project as follows :
 
 ```diff
 {
