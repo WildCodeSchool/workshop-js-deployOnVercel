@@ -99,3 +99,5 @@ Pour afficher votre déploiement, sélectionnez le projet dans le tableau de bor
 ## Conclusion
 
 L'installation et la maintenance de votre propre infrastructure peuvent être fastidieuses et nécessitent la sélection et la configuration du matériel serveur et du système d'exploitation appropriés, l'installation et la configuration de l'infrastructure réseau, la configuration et la maintenance de la pile logicielle nécessaire, et bien plus encore.
+
+Garantir que votre infrastructure est sécurisée et évolutive nécessite une surveillance, une maintenance et une mise à jour continues. Cela inclut la mise en œuvre de protocoles et de solutions de sécurité pour vous protéger contre les menaces et les vulnérabilités, ainsi que la garantie que votre infrastructure peut gérer efficacement un pic de trafic. Toutes ces tâches prennent du temps, sont complexes et nécessitent une équipe dédiée d'ingénieurs expérimentés pour être exécutées à grande échelle.
