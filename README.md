@@ -57,7 +57,7 @@ One common issue is that refreshing the page or navigating directly to a URL wit
 
 To fix this issue, you can set up rewrite rules in the `vercel.json` file in the root of your react app (`/client`) to redirect all requests to the index.html file : 
 
-```js
+```json
 {
   "rewrites": [
     {

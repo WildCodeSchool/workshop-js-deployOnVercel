@@ -57,7 +57,7 @@ Un problème courant lors de l'actualisation de la page ou pendant la navigation
 
 Pour résoudre ce problème, vous pouvez configurer des règles de réécriture dans le fichier `vercel.json` à la racine de votre application React (`/client`) pour rediriger toutes les requêtes vers le fichier index.html :
 
-```js
+```json
 {
   "rewrites": [
     {
