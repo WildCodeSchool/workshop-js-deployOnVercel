@@ -33,11 +33,9 @@ Modify the `postinstall` script of your package.json located at the root of your
 
 ```diff
 {
--  "name": "{nom_de_votre_projet}",
--  "private": true,
 -  ...
 -  "scripts": {
-+  "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
+    "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
 -    ...
   },
 -  ...
