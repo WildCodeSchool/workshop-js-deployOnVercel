@@ -62,7 +62,7 @@ React Router peut parfois rencontrer des problèmes lors de son déploiement sur
 
 Un problème courant lors de l'actualisation de la page ou pendant la navigation directe vers une URL dans une application react déployer sur un serveur est l'apparition d'une erreur 404. En effet, Vercel ne sait pas comment gérer le routage côté client par défaut et le serveur renvoie une erreur 404 au lieu de servir le fichier index.html dont React Router a besoin pour gérer la requête.
 
-Pour résoudre ce problème, vous pouvez configurer des règles de réécriture dans le fichier `vercel.json` à la racine de votre application React (`/client`) pour rediriger toutes les requêtes vers le fichier index.html :
+Pour résoudre ce problème, vous pouvez configurer des règles de réécriture en ajoutant le fichier `vercel.json` à la racine de votre application React (`/client`) pour rediriger toutes les requêtes vers le fichier index.html :
 
 ```json
 {

@@ -62,7 +62,7 @@ React Router can sometimes encounter issues when deployed to Vercel due to the w
 
 One common issue is that refreshing the page or navigating directly to a URL within the application can result in a 404 error. This is because Vercel doesn’t know how to handle client-side routing by default, and the server returns a 404 error instead of serving the index.html file that React Router needs to handle the request.
 
-To fix this issue, you can set up rewrite rules in the `vercel.json` file in the root of your react app (`/client`) to redirect all requests to the index.html file : 
+To fix this issue, you can set up rewrite rules creating the `vercel.json` file in the root of your react app (`/client`) to redirect all requests to the index.html file : 
 
 ```json
 {
