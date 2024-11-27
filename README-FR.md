@@ -23,25 +23,6 @@ Créez un dépôt sur GitHub pour votre projet ou forkez le dépôt sur votre pr
 
 Les déploiements commencent par du code écrit dans l'un des plus de 35 frameworks pris en charge par Vercel, dont Vite ! Les déploiements peuvent être créés via la CLI Vercel ou en envoyant du code vers votre référentiel git. L'intégration Vercel Git écoute automatiquement votre commit et déclenche un nouveau déploiement.
 
-### Configuration Harmonie
-
-Si vous avez utilisé Vite pour générer votre projet vous pouvez directement passer à l'étape de déploiement avec Vercel, en revanche si vous avez généré votre projet via le framework Harmonia comme c'est le cas pour les projets réalisés au sein de la wildcodeschool, une petite mise à jour de votre package.json est nécessaire.
-
-#### package.json
-
-Modifiez le script `postinstall` de votre package.json se trouvant à la racine de votre projet comme suit :
-
-```json
-{
-  ...
-  "scripts": {
-    "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
-  ...
-  },
-  ...
-}
-```
-
 ## Configuration du déploiement avec Vercel
 
 Vercel est une plate-forme destinée aux développeurs qui fournit les outils, les flux de travail et l'infrastructure dont vous avez besoin pour créer et déployer vos applications Web plus rapidement, sans avoir besoin de configuration supplémentaire.
