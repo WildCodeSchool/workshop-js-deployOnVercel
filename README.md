@@ -23,25 +23,6 @@ Create a repository on GitHub for your project or fork the repository on your ow
 
 Deployments start with code written in one of the over 35 frameworks supported by Vercel including Vite ! Deployments can be created through the Vercel CLI or by pushing code to your git repository. The Vercel Git integration automatically listens for your commit and triggers a new deployment.
 
-### Harmonia configuration
-
-If you used Vite to generate your project you can directly move on to the deployment stage with Vercel, on the other hand if you generated your project via the Harmonia framework as is the case for projects carried out within the wildcodeschool, a small update of your package.json is necessary.
-
-#### package.json
-
-Modify the `postinstall` script of your package.json located at the root of your project as follows :
-
-```json
-{
-  ...
-  "scripts": {
-    "postinstall": "node -e \"if (process.env.NODE_ENV === 'production'){process.exit(1)} \" || husky install",
-  ...
-  },
-  ...
-}
-```
-
 ## Vercel deploy config
 
 Vercel is a platform for developers that provides the tools, workflows, and infrastructure you need to build and deploy your web apps faster, without the need for additional configuration.
